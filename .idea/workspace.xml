@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Models">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/managers/DataBaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/CrudRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/IRepositoryAlumnos.java" afterDir="false" />
+    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="DataBaseManager">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/alumnosBBDD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlumnosDAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AlumnosDAM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +29,32 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Ais4VrPCatoD3h1Fj9M7nLr3p6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MTConfigurable"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.drodriguez.es.alumnosdam.managers" />
@@ -87,7 +90,7 @@
       <updated>1655503554351</updated>
       <workItem from="1655503555372" duration="408000" />
       <workItem from="1655504529349" duration="32000" />
-      <workItem from="1655548995622" duration="3425000" />
+      <workItem from="1655548995622" duration="4976000" />
     </task>
     <task id="LOCAL-00001" summary="Models">
       <created>1655551792206</created>
@@ -96,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655551792206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="DataBaseManager">
+      <created>1655554454942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655554454942</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +124,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Models" />
+    <MESSAGE value="DataBaseManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="DataBaseManager" />
   </component>
 </project>
