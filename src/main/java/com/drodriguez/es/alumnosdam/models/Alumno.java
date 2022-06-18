@@ -5,11 +5,14 @@ import javafx.beans.property.*;
 import java.time.LocalDate;
 
 public class Alumno {
+    //Atributos
     private IntegerProperty ID;
     private StringProperty dni;
     private StringProperty nombreApellidos;
     private DoubleProperty nota;
     private ObjectProperty<LocalDate> fechaNacimiento;
+
+    //Constructor
 
     public Alumno(int ID, String dni, String nombreApellidos, double nota, LocalDate fechaNacimiento){
         this.ID = new SimpleIntegerProperty(ID);
@@ -78,5 +81,17 @@ public class Alumno {
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento.set(fechaNacimiento);
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "ID=" + ID +
+                ", dni=" + dni +
+                ", nombreApellidos=" + nombreApellidos +
+                ", nota=" + nota +
+                ", fechaNacimiento=" + fechaNacimiento +
+                '}';
     }
 }

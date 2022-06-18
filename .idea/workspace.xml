@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" afterDir="false" />
+    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Models">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/managers/DataBaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/CrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/IRepositoryAlumnos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlumnosDAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AlumnosDAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,6 +52,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.drodriguez.es.alumnosdam.managers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.drodriguez.es.alumnosdam.HelloApplication" />
@@ -74,8 +87,16 @@
       <updated>1655503554351</updated>
       <workItem from="1655503555372" duration="408000" />
       <workItem from="1655504529349" duration="32000" />
-      <workItem from="1655548995622" duration="1115000" />
+      <workItem from="1655548995622" duration="3425000" />
     </task>
+    <task id="LOCAL-00001" summary="Models">
+      <created>1655551792206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655551792206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +112,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models" />
   </component>
 </project>
