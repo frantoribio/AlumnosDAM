@@ -5,7 +5,8 @@
 <?import javafx.scene.text.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="com.drodriguez.es.alumnosdam.controllers.AlumnadoViewController">
    <children>
       <AnchorPane prefHeight="28.0" prefWidth="600.0">
          <children>
@@ -24,7 +25,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Informe">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Imprimir Informe" />
+                    <MenuItem mnemonicParsing="false" text="Imprimir Informe" onAction="#onPrintInformeAction" />
                   </items>
                 </Menu>
               </menus>
@@ -35,9 +36,9 @@
          <children>
             <TableView prefHeight="573.0" prefWidth="398.0">
               <columns>
-                <TableColumn prefWidth="113.19997864961624" style="-fx-text-fill: red; -fx-background-color: red;" text="Dni" />
-                <TableColumn prefWidth="212.59999084472656" style="-fx-background-color: red;" text="Nombre y Apellidos" />
-                  <TableColumn prefWidth="69.79998779296875" style="-fx-background-color: red;" text="Nota" />
+                <TableColumn prefWidth="113.19997864961624" style="-fx-text-fill: red; -fx-background-color: red;" text="Dni" fx:id="dniData"/>
+                <TableColumn prefWidth="212.59999084472656" style="-fx-background-color: red;" text="Nombre y Apellidos" fx:id="nombreApellidosData"/>
+                  <TableColumn prefWidth="69.79998779296875" style="-fx-background-color: red;" text="Nota" fx:id="notaData" />
               </columns>
             </TableView>
          </children>
@@ -47,7 +48,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="411.0" layoutY="107.0" text="id" visible="false" />
+      <Label layoutX="411.0" layoutY="107.0" text="id" visible="false" fx:id="idData" />
       <Label layoutX="411.0" layoutY="140.0" text="DNI:">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -68,13 +69,13 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="558.0" layoutY="138.0" prefHeight="25.0" prefWidth="218.0" />
-      <TextField layoutX="557.0" layoutY="183.0" prefHeight="25.0" prefWidth="218.0" />
-      <TextField layoutX="557.0" layoutY="233.0" prefHeight="25.0" prefWidth="218.0" />
-      <DatePicker layoutX="557.0" layoutY="281.0" prefHeight="25.0" prefWidth="218.0" />
-      <Button layoutX="508.0" layoutY="445.0" mnemonicParsing="false" text="Registrar" />
-      <Button layoutX="608.0" layoutY="445.0" mnemonicParsing="false" text="Eliminar" />
-      <Button layoutX="469.0" layoutY="398.0" mnemonicParsing="false" text="Actualizar Datos" />
-      <Button layoutX="608.0" layoutY="398.0" mnemonicParsing="false" text="Limipiar Campos" />
+      <TextField layoutX="558.0" layoutY="138.0" prefHeight="25.0" prefWidth="218.0" fx:id="dniDataLabel"/>
+      <TextField layoutX="557.0" layoutY="183.0" prefHeight="25.0" prefWidth="218.0" fx:id="nombreApellidosLabelData"/>
+      <TextField layoutX="557.0" layoutY="233.0" prefHeight="25.0" prefWidth="218.0" fx:id="notaLabelData"/>
+      <DatePicker layoutX="557.0" layoutY="281.0" prefHeight="25.0" prefWidth="218.0" fx:id="fechaNacimientoLabelData"/>
+      <Button layoutX="508.0" layoutY="445.0" mnemonicParsing="false" text="Registrar" onAction="#onRegistrarAlumnoAction" />
+      <Button layoutX="608.0" layoutY="445.0" mnemonicParsing="false" text="Eliminar" onAction="#onEliminarAlumnoAction"/>
+      <Button layoutX="469.0" layoutY="398.0" mnemonicParsing="false" text="Actualizar Datos" onAction="#onActualizarAlumnoAction"/>
+      <Button layoutX="608.0" layoutY="398.0" mnemonicParsing="false" text="Limpiar Campos" onAction="#onLimpiarCamposAction"/>
    </children>
 </Pane>
