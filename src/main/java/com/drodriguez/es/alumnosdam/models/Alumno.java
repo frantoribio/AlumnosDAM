@@ -33,6 +33,9 @@ public class Alumno {
         this.promociona = new SimpleObjectProperty<>(promocion);
     }
 
+    public Alumno(Alumno alumno) {
+    }
+
     //Getter and Setter
     public int getID() {
         return ID.get();

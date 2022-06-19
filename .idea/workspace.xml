@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Vista -Inicializa Datos">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/alumnosCSV.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/dto/AlumnoDTO.java" afterDir="false" />
+    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Importar y CRUD">
+      <change afterPath="$PROJECT_DIR$/data/informe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/IJSONStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/JSONStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/utils/Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/alumnadoBBDD.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/alumnadoBBDD.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/CSVStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/CSVStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,17 +25,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="2Ais4VrPCatoD3h1Fj9M7nLr3p6" />
   <component name="ProjectLevelVcsManager">
@@ -51,6 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "import_schema_mapping": "<schema-mapping><databases><list><schema-mapping-item><source-data-source-id>62a3b8bd-939f-464c-814e-b7778280e263</source-data-source-id><source-path>schema/\"main\"</source-path><target-data-source-id>80e73d7a-0b00-4b1d-bd35-62e6d4c8c108</target-data-source-id><target-path>schema/\"main\"</target-path></schema-mapping-item></list></databases></schema-mapping>",
     "last_opened_file_path": "C:/Users/danie/Desktop/AlumnosDAM/data",
@@ -58,7 +67,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "MTConfigurable"
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -101,7 +111,7 @@
       <updated>1655503554351</updated>
       <workItem from="1655503555372" duration="408000" />
       <workItem from="1655504529349" duration="32000" />
-      <workItem from="1655548995622" duration="24480000" />
+      <workItem from="1655548995622" duration="30603000" />
     </task>
     <task id="LOCAL-00001" summary="Models">
       <created>1655551792206</created>
@@ -152,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655656233223</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Importar y CRUD">
+      <created>1655662493109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655662493110</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +195,11 @@
     <MESSAGE value="Service Storage CSV" />
     <MESSAGE value="Vista" />
     <MESSAGE value="Vista -Inicializa Datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vista -Inicializa Datos" />
+    <MESSAGE value="Importar y CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Importar y CRUD" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
