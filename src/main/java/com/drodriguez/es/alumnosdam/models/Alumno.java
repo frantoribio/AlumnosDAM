@@ -25,6 +25,14 @@ public class Alumno {
         this.promociona = new SimpleObjectProperty<>(promociona);
     }
 
+    public Alumno(String dni, String nombreApellidos, LocalDate fechaNacimiento, double nota, PROMOCION promocion) {
+        this.dni = new SimpleStringProperty(dni);
+        this.nombreApellidos = new SimpleStringProperty(nombreApellidos);
+        this.fechaNacimiento = new SimpleObjectProperty<>(fechaNacimiento);
+        this.nota = new SimpleDoubleProperty(nota);
+        this.promociona = new SimpleObjectProperty<>(promocion);
+    }
+
     //Getter and Setter
     public int getID() {
         return ID.get();

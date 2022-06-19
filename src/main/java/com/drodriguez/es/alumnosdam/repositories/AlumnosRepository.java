@@ -1,18 +1,24 @@
 package com.drodriguez.es.alumnosdam.repositories;
 
+import com.drodriguez.es.alumnosdam.dto.AlumnoDTO;
 import com.drodriguez.es.alumnosdam.managers.DataBaseManager;
 import com.drodriguez.es.alumnosdam.models.Alumno;
 import com.drodriguez.es.alumnosdam.models.PROMOCION;
+import com.drodriguez.es.alumnosdam.services.CSVStorage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.IOException;
+import java.nio.file.Path;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 public class AlumnosRepository implements IRepositoryAlumnos {
     public static AlumnosRepository instance;
+    CSVStorage csvStorage = new CSVStorage();
 
     public final ObservableList<Alumno> repository = FXCollections.observableArrayList();
     DataBaseManager db;
@@ -67,7 +73,7 @@ public class AlumnosRepository implements IRepositoryAlumnos {
 
     @Override
     public Optional<Alumno> save(Alumno alumno) throws SQLException {
-        String sql = "INSERT INTO ALUMNOS (id, dni, nombreApellidos, nota, fechaNacimiento) VALUES (null, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO ALUMNOS (id, dni, nombreApellidos, nota, fechaNacimiento, promocion) VALUES (null, ?, ?, ?, ?, ?)";
         db.open();
         db.insert(sql, alumno.getDni(), alumno.getNombreApellidos(), alumno.getNota(), alumno.getFechaNacimiento(), alumno.getPromociona());
         db.close();
@@ -75,7 +81,15 @@ public class AlumnosRepository implements IRepositoryAlumnos {
     }
 
     @Override
-    public Optional<Alumno> update(Integer integer, Alumno entity) throws SQLException {
+    public Optional<Alumno> update(Integer id, Alumno alumno) throws SQLException {
+        String sql = "UPDATE ALUMNOS SET dni = ?, nombreApellidos = ?, nota = ?, fechaNacimiento = ?, promocion = ? WHERE id = ?";
+        db.open();
+        db.update(sql, alumno.getDni(), alumno.getNombreApellidos(), alumno.getNota(), alumno.getFechaNacimiento(), alumno.getPromociona(), id);
+        db.close();
+        repository.set(repository.indexOf(alumno),alumno);
+
+
+
         return Optional.empty();
     }
 
@@ -87,4 +101,21 @@ public class AlumnosRepository implements IRepositoryAlumnos {
         db.close();
         repository.remove(alumno);
     }
+
+    public void loadFromCSV(Path path) throws SQLException {
+        List<AlumnoDTO> alumnos = csvStorage.loadCSV(path);
+        repository.clear();
+        String sql = "DELETE FROM ALUMNOS";
+        db.open();
+        db.update(sql);
+        db.close();
+        alumnos.forEach(m -> {
+            try {
+                save(m.fromDTO());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+        }
+
 }
