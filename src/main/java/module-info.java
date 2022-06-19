@@ -7,4 +7,7 @@ module com.drodriguez.es.alumnosdam {
 
     opens com.drodriguez.es.alumnosdam to javafx.fxml;
     exports com.drodriguez.es.alumnosdam;
+
+    opens com.drodriguez.es.alumnosdam.controllers to javafx.fxml;
+    exports com.drodriguez.es.alumnosdam.controllers;
 }

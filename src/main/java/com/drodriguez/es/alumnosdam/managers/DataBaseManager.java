@@ -24,7 +24,7 @@ public class DataBaseManager {
     private static DataBaseManager controller;
     private final String APP_PATH = System.getProperty("user.dir");
     private final String DB_DIR = APP_PATH + File.separator + "db";
-    private final String DB_FILE = DB_DIR + File.separator + "alumnosBBDD.db";
+    private final String DB_FILE = DB_DIR + File.separator + "alumnadoBBDD.db";
     private String dataBaseName;
 
     private String jdbcDriver;

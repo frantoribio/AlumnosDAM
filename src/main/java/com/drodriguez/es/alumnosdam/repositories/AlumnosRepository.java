@@ -2,6 +2,7 @@ package com.drodriguez.es.alumnosdam.repositories;
 
 import com.drodriguez.es.alumnosdam.managers.DataBaseManager;
 import com.drodriguez.es.alumnosdam.models.Alumno;
+import com.drodriguez.es.alumnosdam.models.PROMOCION;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 public class AlumnosRepository implements IRepositoryAlumnos {
     public static AlumnosRepository instance;
+
     public final ObservableList<Alumno> repository = FXCollections.observableArrayList();
     DataBaseManager db;
     public AlumnosRepository(DataBaseManager db) {
@@ -36,7 +38,8 @@ public class AlumnosRepository implements IRepositoryAlumnos {
                             resultado.getString("dni"),
                             resultado.getString("nombreApellidos"),
                             resultado.getDouble("nota"),
-                            LocalDate.parse(resultado.getString("fecha"))
+                            LocalDate.parse(resultado.getString("fechaNacimiento")),
+                            PROMOCION.valueOf(resultado.getString("promocion"))
                             ));
         }
         return repository;
@@ -53,7 +56,8 @@ public class AlumnosRepository implements IRepositoryAlumnos {
                     resultado.getString("dni"),
                     resultado.getString("nombreApellidos"),
                     resultado.getDouble("nota"),
-                    LocalDate.parse(resultado.getString("fecha"))
+                    LocalDate.parse(resultado.getString("fecha")),
+                    PROMOCION.valueOf(resultado.getString("promocion"))
             );
             db.close();
             return Optional.of(alumno);
@@ -63,9 +67,9 @@ public class AlumnosRepository implements IRepositoryAlumnos {
 
     @Override
     public Optional<Alumno> save(Alumno alumno) throws SQLException {
-        String sql = "INSERT INTO ALUMNOS (id, dni, nombreApellidos, nota, fechaNacimiento) VALUES (null, ?, ?, ?, ?)";
+        String sql = "INSERT INTO ALUMNOS (id, dni, nombreApellidos, nota, fechaNacimiento) VALUES (null, ?, ?, ?, ?, ?)";
         db.open();
-        db.insert(sql, alumno.getDni(), alumno.getNombreApellidos(), alumno.getNota(), alumno.getFechaNacimiento());
+        db.insert(sql, alumno.getDni(), alumno.getNombreApellidos(), alumno.getNota(), alumno.getFechaNacimiento(), alumno.getPromociona());
         db.close();
         return Optional.of(alumno);
     }

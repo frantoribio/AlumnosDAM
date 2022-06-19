@@ -12,14 +12,17 @@ public class Alumno {
     private DoubleProperty nota;
     private ObjectProperty<LocalDate> fechaNacimiento;
 
+    private ObjectProperty<PROMOCION>promociona;
+
     //Constructor
 
-    public Alumno(int ID, String dni, String nombreApellidos, double nota, LocalDate fechaNacimiento){
+    public Alumno(int ID, String dni, String nombreApellidos, double nota, LocalDate fechaNacimiento, PROMOCION promociona) {
         this.ID = new SimpleIntegerProperty(ID);
         this.dni = new SimpleStringProperty(dni);
         this.nombreApellidos = new SimpleStringProperty(nombreApellidos);
         this.nota = new SimpleDoubleProperty(nota);
         this.fechaNacimiento = new SimpleObjectProperty<>(fechaNacimiento);
+        this.promociona = new SimpleObjectProperty<>(promociona);
     }
 
     //Getter and Setter
@@ -83,6 +86,18 @@ public class Alumno {
         this.fechaNacimiento.set(fechaNacimiento);
     }
 
+    public PROMOCION getPromociona() {
+        return promociona.get();
+    }
+
+    public ObjectProperty<PROMOCION> promocionaProperty() {
+        return promociona;
+    }
+
+    public void setPromociona(PROMOCION promociona) {
+        this.promociona.set(promociona);
+    }
+
     //toString
     @Override
     public String toString() {
@@ -92,6 +107,7 @@ public class Alumno {
                 ", nombreApellidos=" + nombreApellidos +
                 ", nota=" + nota +
                 ", fechaNacimiento=" + fechaNacimiento +
+                ", promociona=" + promociona +
                 '}';
     }
 }

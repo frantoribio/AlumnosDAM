@@ -2,6 +2,7 @@ package com.drodriguez.es.alumnosdam.services;
 
 import com.drodriguez.es.alumnosdam.managers.DataBaseManager;
 import com.drodriguez.es.alumnosdam.models.Alumno;
+import com.drodriguez.es.alumnosdam.models.PROMOCION;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class CSVStorage implements ICSVStorage {
 
     @Override
     public boolean save(Path path, List<Alumno> item) {
-        var encabezado = "id, dni, nombreApellidos, nota, fechaNacimiento";
+        var encabezado = "id, dni, nombreApellidos, nota, fechaNacimiento, promocion";
         var csv =new StringBuilder(encabezado);
         var csvLista = item.stream().map(this::toCsv).toList();
         for (String st : csvLista) {
@@ -49,7 +50,8 @@ public class CSVStorage implements ICSVStorage {
         var nombreApellidos = filds[2];
         var nota = Double.parseDouble(filds[3]);
         var fechaNacimiento = LocalDate.parse(filds[4]);
-        return new Alumno(id, dni, nombreApellidos, nota, fechaNacimiento);
+        var promocion =PROMOCION.valueOf(filds[5]);
+        return new Alumno(id, dni, nombreApellidos, nota, fechaNacimiento, promocion);
     }
 
     private String toCsv(Alumno dto){
@@ -57,6 +59,7 @@ public class CSVStorage implements ICSVStorage {
                 dto.getDni() + ";" +
                 dto.getNombreApellidos() + ";" +
                 dto.getNota() + ";" +
-                dto.getFechaNacimiento();
+                dto.getFechaNacimiento()
+                + ";" + dto.getPromociona();
     }
 }

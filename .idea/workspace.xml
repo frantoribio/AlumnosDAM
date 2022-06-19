@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Service Storage CSV">
+    <list default="true" id="cfddbdf2-0960-40e4-b356-05a251d5d396" name="Changes" comment="Vista">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/PROMOCION.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/alumnosBBDD" beforeDir="false" afterPath="$PROJECT_DIR$/db/alumnadoBBDD.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/controllers/AlumnadoViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/managers/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/managers/DataBaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/models/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/repositories/AlumnosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/CSVStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/drodriguez/es/alumnosdam/services/CSVStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/drodriguez/es/alumnosdam/alumnado-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/drodriguez/es/alumnosdam/alumnado-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +27,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -42,6 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "import_schema_mapping": "<schema-mapping><databases><list><schema-mapping-item><source-data-source-id>62a3b8bd-939f-464c-814e-b7778280e263</source-data-source-id><source-path>schema/\"main\"</source-path><target-data-source-id>80e73d7a-0b00-4b1d-bd35-62e6d4c8c108</target-data-source-id><target-path>schema/\"main\"</target-path></schema-mapping-item></list></databases></schema-mapping>",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,7 +100,7 @@
       <updated>1655503554351</updated>
       <workItem from="1655503555372" duration="408000" />
       <workItem from="1655504529349" duration="32000" />
-      <workItem from="1655548995622" duration="12137000" />
+      <workItem from="1655548995622" duration="18354000" />
     </task>
     <task id="LOCAL-00001" summary="Models">
       <created>1655551792206</created>
@@ -126,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655639189481</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Vista">
+      <created>1655640225901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655640225901</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +168,7 @@
     <MESSAGE value="BaseDeDatos" />
     <MESSAGE value="Repositorio" />
     <MESSAGE value="Service Storage CSV" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service Storage CSV" />
+    <MESSAGE value="Vista" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vista" />
   </component>
 </project>
