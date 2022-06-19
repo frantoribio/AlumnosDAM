@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="28.0" prefWidth="600.0">
+         <children>
+            <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="800.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Salir">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" onAction="#onCerrarAplicacion" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Datos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Importar" onAction="#onImportarAction" />
+                        <MenuItem mnemonicParsing="false" text="Exportar" onAction="#onExportarAction" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Informe">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Imprimir Informe" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="28.0" prefHeight="573.0" prefWidth="398.0">
+         <children>
+            <TableView prefHeight="573.0" prefWidth="398.0">
+              <columns>
+                <TableColumn prefWidth="113.19997864961624" style="-fx-text-fill: red; -fx-background-color: red;" text="Dni" />
+                <TableColumn prefWidth="212.59999084472656" style="-fx-background-color: red;" text="Nombre y Apellidos" />
+                  <TableColumn prefWidth="69.79998779296875" style="-fx-background-color: red;" text="Nota" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="411.0" layoutY="55.0" text="Datos - Formulario Alumnado">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="107.0" text="id" visible="false" />
+      <Label layoutX="411.0" layoutY="140.0" text="DNI:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="185.0" text="Nombre y Apellidos:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="235.0" text="Nota/Calificación:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="283.0" text="Fecha Nacimiento:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="558.0" layoutY="138.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField layoutX="557.0" layoutY="183.0" prefHeight="25.0" prefWidth="218.0" />
+      <TextField layoutX="557.0" layoutY="233.0" prefHeight="25.0" prefWidth="218.0" />
+      <DatePicker layoutX="557.0" layoutY="281.0" prefHeight="25.0" prefWidth="218.0" />
+      <Button layoutX="508.0" layoutY="445.0" mnemonicParsing="false" text="Registrar" />
+      <Button layoutX="608.0" layoutY="445.0" mnemonicParsing="false" text="Eliminar" />
+      <Button layoutX="469.0" layoutY="398.0" mnemonicParsing="false" text="Actualizar Datos" />
+      <Button layoutX="608.0" layoutY="398.0" mnemonicParsing="false" text="Limipiar Campos" />
+   </children>
+</Pane>
